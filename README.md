@@ -2,17 +2,17 @@
 My custom Hyprland dotfiles with extensive matugen Integration
 
 ## Waybar
-
+![waybar](waybar.png)
 ## Fuzzel
-
+![fuzzel](fuzzel.png)
 ## Wallpaper Switcher
-
+![wallpaper-switcher](wallpaper_switcher.png)
 ## Kitty Greetings & FastFetch
-
+![ff-and-greetings](fastfetch.png)
 ## Spicetify & Vesktop
-
+![spotify-and-discord](spicetify-vesktop.png)
 ## Dolphin | Nautilus | Yazi
-
+![dolphin-nautilus-yazi](dolphin-nautilus-yazi.png)
 
 # TODO after install
 
