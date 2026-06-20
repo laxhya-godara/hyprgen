@@ -1,0 +1,117 @@
+@import "colors.css";
+
+* {
+  font-family: "JetBrainsMono Nerd Font", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+window#waybar {
+  background-color: @surface;
+  color: @on_surface;
+}
+
+#window {
+  color: @on_surface;
+  margin: 2px 0;
+  padding: 2px;
+}
+
+#cpu,
+#memory {
+  color: @on_surface;
+  padding: 0 10px;
+}
+
+/* The Workspace Container */
+#workspaces {
+  background-color: @surface_container_low;
+  border-radius: 99px;
+  margin: 6px 4px;
+  padding: 0 4px;
+}
+
+/* Inactive Workspace Buttons */
+#workspaces button {
+  color: @on_surface_variant;
+  border-radius: 99px;
+  padding: 0 8px;
+  margin: 4px 2px;
+  transition: all 0.2s ease-in-out;
+  border: none;
+  box-shadow: none;
+}
+
+#workspaces button:hover {
+  background-color: @surface_container_highest;
+  color: @on_surface;
+}
+
+#workspaces button.active {
+  background-color: @primary;
+  color: @on_primary;
+  padding: 0 14px;
+}
+
+#tray {
+  background-color: @surface_container_low;
+  border-radius: 99px;
+  padding: 0 15px;
+  margin: 6px 10px;
+}
+
+#clock {
+  color: @on_surface_variant;
+  padding: 0 15px;
+}
+
+#backlight,
+#custom-notification,
+#network,
+#bluetooth {
+  color: @on_surface_variant;
+  padding: 0 8px;
+  font-size: 16px;
+}
+
+#pulseaudio {
+  background-color: @surface_container_highest;
+  color: @on_surface;
+  border-radius: 99px;
+  padding: 0 12px;
+  margin: 8px 0 8px 0;
+  font-size: 13px;
+}
+
+#custom-logo,
+#battery {
+  background-color: @surface_container_highest;
+  color: @on_surface;
+  border-radius: 99px;
+  padding: 0 12px;
+  margin: 8px 4px;
+  font-size: 13px;
+}
+
+#battery.charging,
+#battery.plugged {
+  background-color: @primary;
+  color: @on_primary;
+}
+
+#battery.critical:not(.charging) {
+  background-color: @error;
+  color: @on_error;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes blink {
+  to {
+    background-color: @surface;
+    color: @error;
+  }
+}

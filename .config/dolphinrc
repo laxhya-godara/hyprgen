@@ -1,0 +1,19 @@
+[ContextMenu]
+ShowOpenTerminal=false
+
+[General]
+Version=202
+ViewPropsTimestamp=2026,6,9,22,26,29.407
+
+[KFileDialog Settings]
+Places Icons Auto-resize=false
+Places Icons Static Size=22
+
+[MainWindow]
+MenuBar=Disabled
+
+[PreviewSettings]
+Plugins=djvuthumbnail,cursorthumbnail,windowsimagethumbnail,windowsexethumbnail,directorythumbnail,opendocumentthumbnail,comicbookthumbnail,audiothumbnail,imagethumbnail,ebookthumbnail,kraorathumbnail,appimagethumbnail,jpegthumbnail,svgthumbnail,exrthumbnail,glycin-heif,glycin-image-rs,gsf-office,glycin-svg,glycin-jxl
+
+[UiSettings]
+ColorScheme=Matugen

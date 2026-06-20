@@ -1,0 +1,62 @@
+/***
+ *    ┳┳┓┏┓┏┳┓┳┳┏┓┏┓┳┓  ┏┓┏┳┓┓┏┓
+ *    ┃┃┃┣┫ ┃ ┃┃┃┓┣ ┃┃━━┃┓ ┃ ┃┫ 
+ *    ┛ ┗┛┗ ┻ ┗┛┗┛┗┛┛┗  ┗┛ ┻ ┛┗┛
+ *                              
+ */
+
+@define-color accent_color #e0c46d;
+@define-color accent_bg_color #564500;
+@define-color accent_fg_color #fee086;
+@define-color destructive_color #ffb4ab;
+@define-color destructive_bg_color #93000a;
+@define-color destructive_fg_color #ffdad6;
+@define-color success_color #d4c6a1;
+@define-color success_bg_color #4f462a;
+@define-color success_fg_color #f0e1bb;
+@define-color warning_color #accfaf;
+@define-color warning_bg_color #2e4e35;
+@define-color warning_fg_color #c7ecca;
+@define-color error_color #ffb4ab;
+@define-color error_bg_color #93000a;
+@define-color error_fg_color #ffdad6;
+@define-color window_bg_color #16130b;
+@define-color window_fg_color #e9e2d4;
+@define-color view_bg_color #16130b;
+@define-color view_fg_color #e9e2d4;
+@define-color headerbar_bg_color @window_bg_color;
+@define-color headerbar_fg_color @window_fg_color;
+@define-color headerbar_border_color @window_bg_color;
+@define-color headerbar_backdrop_color @window_bg_color;
+@define-color headerbar_shade_color @window_bg_color;
+@define-color card_bg_color #2d2a21;
+@define-color card_fg_color #e9e2d4;
+@define-color card_shade_color rgba(0, 0, 0, 0.07);
+@define-color dialog_bg_color @card_bg_color;
+@define-color dialog_fg_color @card_fg_color;
+@define-color popover_bg_color @card_bg_color;
+@define-color popover_fg_color @card_fg_color;
+@define-color shade_color rgba(0, 0, 0, 0.36);
+@define-color scrollbar_outline_color rgba(139, 145, 152, 0.5);
+@define-color sidebar_bg_color #1e1b13;
+@define-color secondary_sidebar_bg_color @sidebar_bg_color;
+@define-color sidebar_backdrop_color @sidebar_bg_color;
+@define-color secondary_sidebar_backdrop_color @sidebar_bg_color;
+
+.navigation-sidebar {
+	background-color: @sidebar_bg_color;
+	color: @window_fg_color;
+}
+
+
+headerbar.default-decoration {
+  /* You may need to tweak these values depending on your GTK theme */
+  margin-bottom: 50px;
+  margin-top: -100px;
+}
+
+/* rm -rf window shadows */
+window.csd,             /* gtk4? */
+window.csd decoration { /* gtk3 */
+  box-shadow: none;
+}

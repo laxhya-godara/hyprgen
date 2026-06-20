@@ -1,0 +1,112 @@
+# =============================================================================
+# GLOBAL ROOT CONFIG (Must stay at the absolute top!)
+# =============================================================================
+palette = 'colors'
+add_newline = false
+
+format = """
+$username$hostname $directory$git_branch $cmd_duration
+  $character"""
+
+# =============================================================================
+# DYNAMIC MATUGEN PALETTE
+# =============================================================================
+[palettes.colors]
+color1 = '{{colors.primary_fixed_dim.default.hex}}'
+color2 = '{{colors.on_primary.default.hex}}'
+color3 = '{{colors.on_surface_variant.default.hex}}'
+color4 = '{{colors.surface_container.default.hex}}'
+color5 = '{{colors.on_primary.default.hex}}'
+color6 = '{{colors.surface_dim.default.hex}}'
+color7 = '{{colors.surface.default.hex}}'
+color8 = '{{colors.primary.default.hex}}'
+color9 = '{{colors.tertiary.default.hex}}'
+
+# =============================================================================
+# MODULES CONFIG
+# =============================================================================
+[fill]
+symbol = '-'
+style = 'fg:color3'
+
+[character]
+success_symbol = "[ ](bold color9)"
+error_symbol = "[ ](bold @{error})"
+
+[package]
+disabled = true
+
+[git_branch]
+style = "bg:color8"
+symbol = "󰘬"
+truncation_length = 12
+truncation_symbol = ""
+format = " 󰜥 [](bold fg:color8)[$symbol $branch(:$remote_branch)](fg:color2 bg:color8)[ ](bold fg:color8)"
+
+[git_commit]
+commit_hash_length = 4
+tag_symbol = " "
+
+[git_state]
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
+cherry_pick = "[🍒 PICKING](bold red)"
+
+[git_status]
+conflicted = " 🏳 "
+ahead = " 🏎💨 "
+behind = " 😰 "
+diverged = " 😵 "
+untracked = " 🤷 ‍"
+stashed = " 📦 "
+modified = " 📝 "
+staged = '[++\($count\)](green)'
+renamed = " ✍️ "
+deleted = " 🗑 "
+
+[username]
+style_user = "bold bg:color8 fg:color2"
+style_root = "red bold"
+format = "[](bold fg:color8)[$user]($style)"
+disabled = false
+show_always = true
+
+[hostname]
+ssh_only = false
+format = "[•$hostname](bg:color8 bold fg:color2)[](bold fg:color8)"
+trim_at = ".companyname.com"
+disabled = false
+
+[line_break]
+disabled = false
+
+[memory_usage]
+disabled = true
+threshold = -1
+symbol = " "
+style = "bold dimmed green"
+
+[time]
+disabled = true
+format = '🕙[\[ $time \]]($style) '
+time_format = "%T"
+
+[directory]
+home_symbol = " "
+read_only = "  "
+style = "bg:color4 fg:color3"
+truncation_length = 2
+truncation_symbol = ".../"
+format = '[](bold fg:color4)[󰉋 → $path]($style)[](bold fg:color4)'
+
+[directory.substitutions]
+"Desktop" = "  "
+"Documents" = "  "
+"Downloads" = "  "
+"Music" = " 󰎈 "
+"Pictures" = "  "
+"Videos" = "  "
+"GitHub" = " 󰊤 "
+
+[cmd_duration]
+min_time = 0
+format = '[](bold fg:color1)[󰪢 $duration](bold bg:color1 fg:color2)[](bold fg:color1)'
