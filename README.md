@@ -13,6 +13,8 @@ My custom Hyprland dotfiles with extensive matugen Integration
 ![spotify-and-discord](spicetify-vesktop.png)
 ## Dolphin | Nautilus | Yazi
 ![dolphin-nautilus-yazi](dolphin-nautilus-yazi.png)
+## Firefox
+![firefox](minimal-firefox.png)
 
 # TODO after install
 
@@ -30,5 +32,3 @@ My custom Hyprland dotfiles with extensive matugen Integration
       then add this to hyprland enviroment variables:
       `hl.env("XDG_MENU_PREFIX", "arch-")`
    
-4. To fix OBS-Studio no screen-capture option install wayland portal service
-     `sudo pacman -S xdg-desktop-portal-wlr`
