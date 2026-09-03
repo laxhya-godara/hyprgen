@@ -1,0 +1,33 @@
+/* 1. Kill the tabs bar completely */
+#TabsToolbar {
+    visibility: collapse !important;
+}
+
+/* 2. Kill titlebar and menu bars */
+#toolbar-menubar,
+#PersonalToolbar {
+    display: none !important;
+}
+
+/* 3. Auto-hide the entire navigation bar */
+#nav-bar {
+    margin-top: -40px !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transition: margin-top 0.2s ease, opacity 0.2s ease !important;
+    z-index: 9999 !important;
+}
+
+/* 4. Reveal ONLY when focused (Ctrl+L) or mouse touches the top edge */
+#navigator-toolbox:hover #nav-bar,
+#nav-bar:focus-within {
+    margin-top: 0px !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+}
+
+/* 5. Stretch web page to the true top */
+#browser,
+#appcontent {
+    margin-top: 0 !important;
+}
